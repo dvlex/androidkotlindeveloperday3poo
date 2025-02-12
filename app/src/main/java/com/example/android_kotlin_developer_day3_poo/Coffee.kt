@@ -7,17 +7,20 @@ import com.example.android_kotlin_developer_day3_poo.utils.pluralize
 class Coffee(
     val coffeeData: IHotDrinkData
 ) {
-    // ini is the constructor, anyway, you can use the parentesis as constructor
+    // init is the constructor, anyway, you can use the parentesis as constructor
     init {
         println("your coffee is starting to being make...")
         makeCoffee(coffeeData.sugarCount, coffeeData.owner, coffeeData.size)
     }
 
     private fun makeCoffee(sugarCount: Int, name: String, size: HotDrinkSize){
-
         println("""
-        The ${size.name.lowercase()} Coffee for $name, is ready 
-        with ${ pluralize("spoon of","spoons of", sugarCount) } sugar
-    """)
+            The ${size.name.lowercase()} Coffee for $name, is ready 
+            with ${ pluralize("spoon of","spoons of", sugarCount) } sugar
+        """.trimMargin().trimIndent())
     }
 }
+/*
+* this is a multi line section
+* lol
+* */
